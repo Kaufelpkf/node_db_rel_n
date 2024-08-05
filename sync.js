@@ -6,7 +6,7 @@
         await conn.sync({force:true})
         console.log('Tabelas criadas e banco de dados sincronizados!')
     }catch(err){
-        console.error('Erro de sincronização com o Banco!')
+        console.error('Erro de sincronização com o Banco!', err)
     }finally{
         conn.close()
         console.log('Conexão com o banco finalizada!')
